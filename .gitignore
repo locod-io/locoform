@@ -3,3 +3,4 @@ vendor
 frontend/dist
 frontend/node_modules
 _temp
+html
