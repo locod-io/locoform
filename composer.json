@@ -1,0 +1,25 @@
+{
+  "name": "locodio/locoform",
+  "description": "LocoForm is a form builder that is both lightweight and free of unnecessary features, making it ideal for self-hosting.",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Koen Caerels",
+      "email": "koen.caerels@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "bcosca/fatfree-core": "^3.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\LocoForm\\": "locoform/"
+    }
+  },
+  "extra": {
+    "public-dir": "public"
+  }
+}
