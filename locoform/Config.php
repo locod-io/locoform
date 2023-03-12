@@ -19,7 +19,7 @@ class Config
 
     public const ADMIN_URL = 'admin';
     public const ADMIN_HASH_CODE = 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'; // test (SHA1)
-    public const DATA_FOLDER = 'data';
+    public const DATA_FOLDER = '_data';
 
     //-- database credentials ------------------------------------------------------------------------------------------
     public const DB_SERVER = 'db';

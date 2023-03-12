@@ -12,37 +12,13 @@ class App
         echo 'start';
     }
 
-    public function form(\Base $f3, array $args = []): void
-    {
-        echo 'form from controller';
-        echo "<p>".$f3->VERB."</p>";
-        echo "<p>".$args['formCode']."</p>";
-
-        $form = new Form($args['formCode'],'some name');
-        $form->save();
-
-        echo "<p>".$form->getId()."</p>";
-
-    }
-
-    public function fillForm(\Base $f3, array $args = []): void
-    {
-        echo 'fillForm from controller';
-        echo "<p>".$f3->VERB."</p>";
-        echo "<p>".$args['formCode']."</p>";
-    }
-
-    public function page(\Base $f3, array $args = []): void
-    {
-        echo 'page from controller';
-        echo "<p>".$f3->VERB."</p>";
-        echo "<p>form code: ".$args['formCode']."</p>";
-        echo "<p>page code: ".$args['pageCode']."</p>";
-    }
-
     public function auth(\Base $f3, array $args = []): void
     {
         echo 'auth';
+        echo '<br><br>';
+        new \Session(NULL,'CSRF');
+        echo $f3->CSRF; // token here
+
     }
 
     public function authAction(\Base $f3, array $args = []): void
