@@ -1,8 +1,8 @@
 <?php
 
-namespace App\LocoForm\Controllers;
+namespace App\locoform\Infrastructure\Controllers;
 
-use App\LocoForm\Model\Form as FormModel;
+use App\locoform\Domain\Model\Form as FormModel;
 
 class Form
 {

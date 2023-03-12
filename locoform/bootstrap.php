@@ -1,7 +1,7 @@
 <?php
 
-use \RedBeanPHP\R as R;
-use App\LocoForm\Config;
+use App\LocoForm\Infrastructure\Config;
+use RedBeanPHP\R as R;
 
 R::ext('locoDispense', function( $type ){
     return R::getRedBean()->dispense( $type );

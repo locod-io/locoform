@@ -1,9 +1,9 @@
 <?php
 
-namespace App\LocoForm\Model;
+namespace App\locoform\Domain\Model;
 
-use \RedBeanPHP\R as R;
-use App\LocoForm\Config;
+use App\locoform\Infrastructure\Config;
+use RedBeanPHP\R as R;
 
 class Form
 {

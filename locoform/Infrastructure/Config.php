@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\LocoForm;
+namespace App\locoform\Infrastructure;
 
 class Config
 {
