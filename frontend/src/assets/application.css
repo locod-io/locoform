@@ -1,0 +1,8 @@
+body, html {
+    background-color: whitesmoke;
+}
+
+#login.container {
+    padding: 10px;
+    max-width: 600px;
+}

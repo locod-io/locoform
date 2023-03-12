@@ -6,6 +6,8 @@ RewriteBase /locoform/
 RewriteRule assets\/.+\.(?!(html?|css|js|jpe?g|png|gif|svg|pdf|avif|webp|mp3|mp?4a?v?|woff2?|txt|ico|zip|tgz|otf|ttf|eot|woff|woff2)$)[^\.]+?$ - [F]
 RewriteRule assets_admin\/.+\.(?!(html?|css|js|jpe?g|png|gif|svg|pdf|avif|webp|mp3|mp?4a?v?|woff2?|txt|ico|zip|tgz|otf|ttf|eot|woff|woff2)$)[^\.]+?$ - [F]
 
+RewriteRule ^(app|dict|ns|tmp)\/|\.ini$ - [R=404]
+
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 

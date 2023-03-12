@@ -14,13 +14,10 @@ namespace App\locoform\Infrastructure;
 class Config
 {
     public const LOCOFORM_PUBLIC_FOLDER = 'locoform';
-
-    public const APP_RELATIVE_DIR = '../../';
-
     public const APP_ENV = 'dev';   // dev / test / prod
-
+    public const APP_RELATIVE_DIR = '../../';
     public const ADMIN_URL = 'admin';
-    public const ADMIN_HASH_CODE = 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'; // test (SHA1)
+    public const ADMIN_HASH_CODE = 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3';  // test (SHA1)
     public const DATA_FOLDER = '_data';
 
     //-- database credentials ------------------------------------------------------------------------------------------

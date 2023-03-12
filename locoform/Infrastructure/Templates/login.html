@@ -1,0 +1,49 @@
+<include href="{{ @APP_RELATIVE_DIR.'locoform/Infrastructure/Templates/header.html' }}"/>
+
+<div id="login" class="container">
+    <div class="box mt-4">
+        <form method="post" autocomplete="off">
+            <input type="hidden" name="csrf_token" value="{{ @CSRF }}">
+            <div class="columns">
+                <div class="column">
+                    <div class="has-text-centered has-text-weight-bold">
+                        LocoForm
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="columns">
+                <div class="column is-one-fifth">&nbsp;</div>
+                <div class="column">
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control has-icons-left">
+                            <input class="input"
+                                   autocomplete="off"
+                                   name="locoform_passcode"
+                                   type="password"
+                                   placeholder="password"
+                                   value="password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <label class="label">&nbsp;</label>
+                        <div class="control">
+                            <button class="button is-info" type="submit">LOGIN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">&nbsp;</div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<include href="{{ @APP_RELATIVE_DIR.'locoform/Infrastructure/Templates/footer.html' }}"/>

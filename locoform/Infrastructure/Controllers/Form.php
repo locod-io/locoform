@@ -4,7 +4,7 @@ namespace App\LocoForm\Infrastructure\Controllers;
 
 use App\LocoForm\Domain\Model\Form as FormModel;
 
-class Form
+class Form extends BaseController
 {
 
     public function form(\Base $f3, array $args = []): void
