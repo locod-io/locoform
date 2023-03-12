@@ -15,6 +15,8 @@ class Config
 {
     public const LOCOFORM_PUBLIC_FOLDER = 'locoform';
 
+    public const APP_RELATIVE_DIR = '../../';
+
     public const APP_ENV = 'dev';   // dev / test / prod
 
     public const ADMIN_URL = 'admin';
