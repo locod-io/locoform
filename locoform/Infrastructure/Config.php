@@ -9,15 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace App\locoform\Infrastructure;
+namespace App\LocoForm\Infrastructure;
 
 class Config
 {
+    public const APP_NAME = 'LocoForm';
     public const LOCOFORM_PUBLIC_FOLDER = 'locoform';
     public const APP_ENV = 'dev';   // dev / test / prod
     public const APP_RELATIVE_DIR = '../../';
+    //-- admin settings ------------------------------------------------------------------------------------------------
     public const ADMIN_URL = 'admin';
     public const ADMIN_HASH_CODE = 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3';  // test (SHA1)
+
+    //-- data storage settings -----------------------------------------------------------------------------------------
     public const DATA_FOLDER = '_data';
 
     //-- database credentials ------------------------------------------------------------------------------------------

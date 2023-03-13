@@ -1,21 +1,27 @@
 import {defineConfig} from 'vite'
 
+let _publicFolder = 'locoform';
+
 export default defineConfig({
     server: {
         port: 3030,
     },
+    optimizeDeps: {
+        include: ['jquery'],
+    },
     build: {
         ssr: false,
-        manifest: 'locoform/assets/manifest.json',
+        manifest: _publicFolder + '/assets/manifest.json',
         outDir: '../public',
-        assetsDir: 'locoform/assets/',
+        assetsDir: _publicFolder + '/assets/',
         assetsInclude: ['**/*.css', '**/*.js'],
         rollupOptions: {
             input: {
                 main: 'src/main.js',
                 login: 'src/login.js',
-                styles: 'src/assets/styles.css'
+                validation: 'src/validation.js',
+                styles: 'src/css/styles.css'
             }
         }
-    }
+    },
 });

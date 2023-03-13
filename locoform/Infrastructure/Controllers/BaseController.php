@@ -12,7 +12,7 @@ class BaseController
         $result = [];
         $manifest = $f3->get('APP_MANIFEST');
         foreach ($entries as $entry) {
-            $result[] = '/' . $manifest['src/assets/' . $entry . '.css']['file'];
+            $result[] = '/' . $manifest['src/css/' . $entry . '.css']['file'];
         }
         return $result;
     }

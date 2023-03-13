@@ -1,8 +1,8 @@
-<include href="{{ @APP_RELATIVE_DIR.'locoform/Infrastructure/Templates/header.html' }}"/>
+<include href="{{ @APP_RELATIVE_DIR.'locoform/Infrastructure/Templates/layout/header.html' }}"/>
 
 <div id="login" class="container">
     <div class="box mt-4">
-        <form method="post" autocomplete="off">
+        <form method="post" autocomplete="off" id="loginForm">
             <input type="hidden" name="csrf_token" value="{{ @CSRF }}">
             <div class="columns">
                 <div class="column">
@@ -18,11 +18,12 @@
                     <div class="field">
                         <label class="label">Password</label>
                         <div class="control has-icons-left">
-                            <input class="input"
+                            <input id="ti_password"
+                                   class="input required"
                                    autocomplete="off"
-                                   name="locoform_passcode"
+                                   name="locoform_password"
                                    type="password"
-                                   placeholder="password"
+                                   placeholder="enter your password"
                                    value="password">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
@@ -46,4 +47,4 @@
     </div>
 </div>
 
-<include href="{{ @APP_RELATIVE_DIR.'locoform/Infrastructure/Templates/footer.html' }}"/>
+<include href="{{ @APP_RELATIVE_DIR.'locoform/Infrastructure/Templates/layout/footer.html' }}"/>

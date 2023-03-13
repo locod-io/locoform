@@ -2,16 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Form Builder</title>
+    <title>LocoForm - Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/src/assets/styles.css">
+    <link rel="stylesheet" href="/src/css/styles.css">
 </head>
 <body>
 
 <div id="login" class="container">
     <div class="box mt-4">
-        <form method="post">
-            <input type="hidden" name="crsf_token" value="">
+        <form method="post" id="loginForm">
+            <input type="hidden" name="crsf_token" value="__token__">
             <div class="columns">
                 <div class="column">
                     <div class="has-text-centered has-text-weight-bold">
@@ -26,7 +26,11 @@
                     <div class="field">
                         <label class="label">Password</label>
                         <div class="control has-icons-left">
-                            <input class="input" type="password"
+                            <input id="ti_password"
+                                   class="input required"
+                                   autocomplete="off"
+                                   name="locoform_password"
+                                   type="password"
                                    placeholder="password"
                                    value="password">
                             <span class="icon is-small is-left">

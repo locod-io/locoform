@@ -31,13 +31,13 @@
     "file": "locoform/assets/fa-v4compatibility-7c377405.woff2",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
-  "src/assets/styles.css": {
+  "src/css/styles.css": {
     "file": "locoform/assets/styles-a2c9a3d9.css",
     "isEntry": true,
-    "src": "src/assets/styles.css"
+    "src": "src/css/styles.css"
   },
   "src/login.js": {
-    "file": "locoform/assets/login-4ed993c7.js",
+    "file": "locoform/assets/login-4df34e51.js",
     "isEntry": true,
     "src": "src/login.js"
   },
@@ -45,5 +45,10 @@
     "file": "locoform/assets/main-4ed993c7.js",
     "isEntry": true,
     "src": "src/main.js"
+  },
+  "src/validation.js": {
+    "file": "locoform/assets/validation-4ed993c7.js",
+    "isEntry": true,
+    "src": "src/validation.js"
   }
 }

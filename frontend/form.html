@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>LocoForm - Form Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+
+<div class="container" id="locoFormWrapper">
+    <div class="box mt-4">
+        <form id="locoForm" autocomplete="off">
+
+            <input type="hidden" name="crsf_token" value="__token__">
+
+            <!-- // form title -->
+            <div class="columns">
+                <div class="column">
+                    <h2 class="is-size-4">Form title.</h2>
+                </div>
+            </div>
+            <!-- // form introduction -->
+            <div class="columns">
+                <div class="column">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor risus ac velit imperdiet
+                        vulputate. Mauris at sodales nunc. Sed porttitor, ante ac fermentum scelerisque, libero odio
+                        eleifend erat, vitae sollicitudin nibh ipsum id sem. Ut a risus interdum, efficitur lectus eu,
+                        gravida lectus. Nam sagittis euismod vestibulum. Vestibulum id orci justo. Curabitur vestibulum
+                        massa felis. Integer sed neque scelerisque, sagittis nulla a, malesuada arcu.
+                        Pellentesque luctus tincidunt libero nec malesuada.
+                    </p>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor risus ac velit imperdiet
+                        vulputate. Mauris at sodales nunc. Sed porttitor, ante ac fermentum scelerisque, libero odio
+                        eleifend erat, vitae sollicitudin nibh ipsum id sem.
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        Nam sagittis euismod vestibulum. Vestibulum id orci justo. Curabitur vestibulum
+                        massa felis. Integer sed neque scelerisque, sagittis nulla a, malesuada arcu.
+                        Pellentesque luctus tincidunt libero nec malesuada.
+                    </p>
+                </div>
+            </div>
+
+            <!-- // form divider -->
+            <hr>
+
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- // text input single line horizontal label -->
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <div class="columns">
+                <div class="column">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label" for="ti_field_1">Field 1 *</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control has-icons-right">
+                                    <input name="field_1"
+                                           autocomplete="off"
+                                           id="ti_field_1"
+                                           class="validation input"
+                                           type="text"
+                                           data-validation-type="text"
+                                           data-validation="required"
+                                           data-min-value="1"
+                                           data-max-value="100"
+                                           placeholder="placeholder field 1">
+                                    <span class="icon is-small is-right validIcon" id="ti_field_1_check">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span class="icon is-small is-right errorIcon" id="ti_field_1_error">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger" id="ti_field_1_error_msg">
+                                    Dit is een verplicht veld.
+                                </p>
+                                <p class="help is-danger errorText" id="ti_field_1_min_value_error_msg">
+                                    Minimum x karakters
+                                </p>
+                                <p class="help is-danger errorText" id="ti_field_1_max_value_error_msg">
+                                    Maximum x karakters
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- // text input single line vertical label -->
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <div class="columns">
+                <div class="column">
+                    <!-- // text input -->
+                    <div class="field">
+                        <div class="label">
+                            <label class="label" for="ti_field_1">Field 2 *</label>
+                        </div>
+                        <div class="control has-icons-right">
+                            <input name="field_2"
+                                   autocomplete="off"
+                                   id="ti_field_2"
+                                   class="validation input"
+                                   type="text"
+                                   data-validation-type="text"
+                                   data-validation="required"
+                                   data-min-value="10"
+                                   data-max-value="100"
+                                   placeholder="placeholder field 2">
+                            <span class="icon is-small is-right validIcon" id="ti_field_2_check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="icon is-small is-right errorIcon" id="ti_field_2_error">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="ti_field_2_error_msg">
+                            Dit is een verplicht veld.
+                        </p>
+                        <p class="help is-danger errorIcon" id="ti_field_2_min_value_error_msg">
+                            Minimum x karakters
+                        </p>
+                        <p class="help is-danger errorText" id="ti_field_2_max_value_error_msg">
+                            Maximum x karakters
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- // text input email validation -->
+                    <div class="field">
+                        <div class="label">
+                            <label class="label" for="ti_field_3">Email *</label>
+                        </div>
+                        <div class="control has-icons-right">
+                            <input name="field_3"
+                                   autocomplete="off"
+                                   id="ti_field_3"
+                                   class="validation input"
+                                   type="email"
+                                   data-validation-type="email"
+                                   data-validation="required"
+                                   placeholder="placeholder field 3 (email)">
+                            <span class="icon is-small is-right validIcon" id="ti_field_3_check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="icon is-small is-right errorIcon" id="ti_field_3_error">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="ti_field_3_error_msg">
+                            Gelieve een geldig email adres in te vullen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- // text input single line vertical label + number inputs -->
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <div class="columns">
+                <div class="column">
+                    <!-- // text input -->
+                    <div class="field">
+                        <div class="label">
+                            <label class="label" for="ti_field_4">Field 4 *</label>
+                        </div>
+                        <div class="control has-icons-right">
+                            <input name="field_4"
+                                   autocomplete="off"
+                                   id="ti_field_4"
+                                   class="validation input"
+                                   type="text"
+                                   data-validation-type="text"
+                                   data-validation="required"
+                                   data-min-value="10"
+                                   data-max-value="100"
+                                   placeholder="placeholder field 4">
+                            <span class="icon is-small is-right validIcon" id="ti_field_4_check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="icon is-small is-right errorIcon" id="ti_field_4_error">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="ti_field_4_error_msg">
+                            Dit is een verplicht veld.
+                        </p>
+                        <p class="help is-danger errorIcon" id="ti_field_4_min_value_error_msg">
+                            Minimum x karakters
+                        </p>
+                        <p class="help is-danger errorText" id="ti_field_4_max_value_error_msg">
+                            Maximum x karakters
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- // dropdown input -->
+                    <div class="field">
+                        <div class="label">
+                            <label class="label" for="ti_field_5">Field 5 *</label>
+                        </div>
+                        <div class="control">
+                            <div class="select w-full">
+                                <select name="field_5" id="ti_field_5">
+                                    <option value="value_1">Value 1</option>
+                                    <option value="value_2">Value 2</option>
+                                    <option value="value_3">Value 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p class="help is-danger" id="ti_field_5_error_msg">
+                            Dit is een verplicht veld.
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-one-fifth">
+                    <!-- // number input -->
+                    <div class="field">
+                        <div class="label">
+                            <label class="label" for="ti_field_6">Field 6 *</label>
+                        </div>
+                        <div class="control has-icons-right">
+                            <input name="field_6"
+                                   autocomplete="off"
+                                   id="ti_field_6"
+                                   class="validation input"
+                                   type="number"
+                                   data-validation-type="number"
+                                   data-validation="required"
+                                   data-min-value="10"
+                                   data-max-value="100"
+                                   placeholder="field 6">
+                            <span class="icon is-small is-right validIcon" id="ti_field_6_check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="icon is-small is-right errorIcon" id="ti_field_6_error">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="ti_field_6_error_msg">
+                            Dit is een verplicht veld.
+                        </p>
+                        <p class="help is-danger errorText" id="ti_field_6_min_value_error_msg">
+                            Minimum waarde x
+                        </p>
+                        <p class="help is-danger errorText" id="ti_field_6_max_value_error_msg">
+                            Maximum waarde x
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- // checkboxes // radios // textarea -->
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <div class="columns">
+                <div class="column">
+                    <!-- // radio buttons input -->
+                    <div class="field">
+                        <div class="label">
+                            <label class="label">Field 7 *</label>
+                        </div>
+                        <div class="control has-icons-right validation"
+                             data-validation-type="radio"
+                             data-validation="required">
+                            <div>
+                                <label class="radio">
+                                    <input type="radio" name="field_7">
+                                    Option 1
+                                </label>
+                            </div>
+                            <div>
+                                <label class="radio">
+                                    <input type="radio" name="field_7">
+                                    Option 2
+                                </label>
+                            </div>
+                            <div>
+                                <label class="radio">
+                                    <input type="radio" name="field_7">
+                                    Option 3
+                                </label>
+                            </div>
+                            <div>
+                                <label class="radio">
+                                    <input type="radio" name="field_7">
+                                    Option 4
+                                </label>
+                            </div>
+                            <span class="icon is-small is-right validIcon" id="ti_field_7_check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="icon is-small is-right errorIcon" id="ti_field_7_error">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="ti_field_7_error_msg">
+                            Dit is een verplicht veld.
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- // checkbox buttons input -->
+                    <div class="field">
+                        <div class="label">
+                            <label class="label">Field 8 *</label>
+                        </div>
+                        <div class="control has-icons-right validation"
+                             data-validation-type="checkbox"
+                             data-validation="required"
+                             data-min-value="2"
+                             data-max-value="4">
+                            <div>
+                                <label class="radio">
+                                    <input type="checkbox" name="field_8">
+                                    Option 1
+                                </label>
+                            </div>
+                            <div>
+                                <label class="radio">
+                                    <input type="checkbox" name="field_8">
+                                    Option 2
+                                </label>
+                            </div>
+                            <div>
+                                <label class="radio">
+                                    <input type="checkbox" name="field_8">
+                                    Option 3
+                                </label>
+                            </div>
+                            <div>
+                                <label class="radio">
+                                    <input type="checkbox" name="field_8">
+                                    Option 4
+                                </label>
+                            </div>
+                            <span class="icon is-small is-right validIcon" id="ti_field_8_check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="icon is-small is-right errorIcon" id="ti_field_8_error">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="ti_field_8_error_msg">
+                            Dit is een verplicht veld.
+                        </p>
+                        <p class="help is-danger errorIcon" id="ti_field_8_min_value_error_msg">
+                            Minimum x karakters
+                        </p>
+                        <p class="help is-danger errorText" id="ti_field_8_max_value_error_msg">
+                            Maximum x karakters
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- // textarea input -->
+                    <div class="field">
+                        <div class="label">
+                            <label class="label" for="ti_field_9">Field 9 *</label>
+                        </div>
+                        <div class="control has-icons-right">
+                            <textarea name="field_9"
+                                      rows="4"
+                                      autocomplete="off"
+                                      id="ti_field_9"
+                                      class="textarea validation"
+                                      data-validation-type="text"
+                                      data-validation="required"
+                                      data-min-value="1"
+                                      data-max-value="100"
+                                      placeholder="textarea field"></textarea>
+                            <span class="icon is-small is-right validIcon" id="ti_field_9_check">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="icon is-small is-right errorIcon" id="ti_field_9_error">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                        <p class="help is-danger" id="ti_field_9_error_msg">
+                            Dit is een verplicht veld.
+                        </p>
+                        <p class="help is-danger errorIcon" id="ti_field_9_min_value_error_msg">
+                            Minimum x karakters
+                        </p>
+                        <p class="help is-danger errorText" id="ti_field_9_max_value_error_msg">
+                            Maximum x karakters
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- horizontal checkboxes -->
+            <!-- --------------------------------------------------------------------------------------------------- -->
+
+            <div class="columns">
+                <div class="column">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Field 10 *</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field mt-2">
+                                <div class="control has-icons-right validation"
+                                     data-validation-type="checkbox"
+                                     data-validation="required"
+                                     data-min-value="2"
+                                     data-max-value="4">
+                                    <label class="radio">
+                                        <input type="checkbox" name="field_10">
+                                        Option 1
+                                    </label>
+                                    <label class="radio">
+                                        <input type="checkbox" name="field_10">
+                                        Option 2
+                                    </label>
+                                    <label class="radio">
+                                        <input type="checkbox" name="field_10">
+                                        Option 3
+                                    </label>
+                                    <label class="radio">
+                                        <input type="checkbox" name="field_10">
+                                        Option 4
+                                    </label>
+                                    <span class="icon is-small is-right validIcon" id="ti_field_10_check">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span class="icon is-small is-right errorIcon" id="ti_field_10_error">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger" id="ti_field_10_error_msg">
+                                    Dit is een verplicht veld.
+                                </p>
+                                <p class="help is-danger errorText" id="ti_field_10_min_value_error_msg">
+                                    Minimum x karakters
+                                </p>
+                                <p class="help is-danger errorText" id="ti_field_10_max_value_error_msg">
+                                    Maximum x karakters
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- horizontal radio buttons -->
+            <!-- --------------------------------------------------------------------------------------------------- -->
+
+            <div class="columns">
+                <div class="column">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Field 11 *</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field mt-2">
+                                <div class="control has-icons-right validation"
+                                     data-validation-type="radio"
+                                     data-validation="required">
+                                    <label class="radio">
+                                        <input type="radio" name="field_11">
+                                        Option 1
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="field_11">
+                                        Option 2
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="field_11">
+                                        Option 3
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="field_11">
+                                        Option 4
+                                    </label>
+                                    <span class="icon is-small is-right validIcon" id="ti_field_11_check">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                    <span class="icon is-small is-right errorIcon" id="ti_field_11_error">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                </div>
+                                <p class="help is-danger" id="ti_field_11_error_msg">
+                                    Dit is een verplicht veld.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- horizontal radio buttons with big question (survey mode) -->
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <hr>
+            <div class="columns">
+                <div class="column is-one-third has-text-right">
+                    <label class="label">
+                        Field 12: Mauris at sodales nunc. Sed porttitor, ante ac fermentum scelerisque,
+                        libero odio eleifend erat, vitae nibh ipsum id sem. *
+                    </label>
+                </div>
+                <div class="column">
+                    <div class="columns control validation"
+                         data-validation-type="radioSurvey"
+                         data-validation="required">
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="radio" name="field_12">
+                                <div class="mt-2">1</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="radio" name="field_12">
+                                <div class="mt-2">2</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="radio" name="field_12">
+                                <div class="mt-2">3</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="radio" name="field_12">
+                                <div class="mt-2">4</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="radio" name="field_12">
+                                <div class="mt-2">5</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="radio" name="field_12">
+                                <div class="mt-2">6</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="radio" name="field_12">
+                                <div class="mt-2">7</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="radio" name="field_12">
+                                <div class="mt-2">8</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="radio" name="field_12">
+                                <div class="mt-2">9</div>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="help is-danger" id="ti_field_12_error_msg">
+                        Dit is een verplicht veld.
+                    </p>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- horizontal checkbox buttons with big question (survey mode) -->
+            <!-- --------------------------------------------------------------------------------------------------- -->
+
+            <div class="columns">
+                <div class="column is-one-third has-text-right">
+                    <label class="label">
+                        Field 13: Mauris at sodales nunc. Sed porttitor, ante ac fermentum scelerisque,
+                        libero odio eleifend erat, vitae nibh ipsum id sem. *
+                    </label>
+                </div>
+                <div class="column">
+                    <div class="columns control validation"
+                         data-validation-type="checkboxSurvey"
+                         data-validation="required"
+                         data-min-value="2"
+                         data-max-value="4">
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="checkbox" name="field_13">
+                                <div class="mt-2">1</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="checkbox" name="field_13">
+                                <div class="mt-2">2</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="checkbox" name="field_13">
+                                <div class="mt-2">3</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="checkbox" name="field_13">
+                                <div class="mt-2">4</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="checkbox" name="field_13">
+                                <div class="mt-2">5</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="checkbox" name="field_13">
+                                <div class="mt-2">6</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="checkbox" name="field_13">
+                                <div class="mt-2">7</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="checkbox" name="field_13">
+                                <div class="mt-2">8</div>
+                            </label>
+                        </div>
+                        <div class="column has-text-centered">
+                            <label class="radio">
+                                <input type="checkbox" name="field_13">
+                                <div class="mt-2">9</div>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="help is-danger" id="ti_field_13_error_msg">
+                        Dit is een verplicht veld.
+                    </p>
+                    <p class="help is-danger errorText" id="ti_field_13_min_value_error_msg">
+                        Minimum x karakters
+                    </p>
+                    <p class="help is-danger errorText" id="ti_field_13_max_value_error_msg">
+                        Maximum x karakters
+                    </p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column">
+                    <!-- // some text -->
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor risus ac velit imperdiet
+                        vulputate. Mauris at sodales nunc. Sed porttitor, ante ac fermentum scelerisque, libero odio
+                        eleifend erat, vitae sollicitudin nibh ipsum id sem.
+                    </p>
+                </div>
+                <div class="column">
+                    <!-- // number input in disable modus -->
+                    <div class="field">
+                        <div class="label">
+                            <label class="label" for="ti_field_14">Field 14 *</label>
+                        </div>
+                        <div class="control">
+                            <input name="field_14"
+                                   autocomplete="off"
+                                   id="ti_field_14"
+                                   disabled
+                                   class="input"
+                                   type="number"
+                                   value="2023"
+                                   placeholder="readonly field 14">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- // form submit button -->
+            <div class="columns">
+                <div class="column">
+                    <!-- type => submit -->
+                    <button id="btnSubmit" class="button is-info" type="button">SEND FORM</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <br><br><br>&nbsp;
+</div>
+
+<script type="module" src="/src/form.js"></script>
+
+</body>
+</html>

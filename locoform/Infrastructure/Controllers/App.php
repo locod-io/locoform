@@ -9,7 +9,10 @@ class App extends BaseController
 
     public function start(\Base $f3, array $args = []): void
     {
-        echo 'start';
+        $f3->set('PAGE_TITLE', 'Welcome');
+        $f3->set('APP_STYLESHEETS', $this->getStylesheets($f3, ['styles']));
+        $f3->set('APP_JAVASCRIPTS', $this->getJavascripts($f3, []));
+        echo \Template::instance()->render(Config::APP_RELATIVE_DIR . 'locoform/Infrastructure/Templates/start.html');
     }
 
     public function auth(\Base $f3, array $args = []): void
@@ -34,15 +37,15 @@ class App extends BaseController
         new \Session();
         $session_token = $f3->get('SESSION.csrf_token');
         $token = $f3->get('POST.csrf_token');
-        $passcode = $f3->get('POST.locoform_passcode');
+        $password = $f3->get('POST.locoform_password');
 
         if (empty($token)
             || empty($session_token)
-            || empty($passcode)
+            || empty($password)
             || $token !== $session_token) {
             $f3->reroute('@admin_login', false);
         } else {
-            if (sha1($passcode) === Config::ADMIN_HASH_CODE) {
+            if (sha1($password) === Config::ADMIN_HASH_CODE) {
                 $f3->set('SESSION.is_logged_in', true);
                 $f3->set('SESSION.timestamp', time());
                 $f3->reroute('@admin', false);
@@ -55,6 +58,8 @@ class App extends BaseController
 
     public function logout(\Base $f3, array $args = []): void
     {
+        new \Session();
+        $f3->set('SESSION.is_logged_in', false);
         $f3->clear('SESSION');
         $f3->reroute('@admin_login', false);
     }
@@ -64,10 +69,24 @@ class App extends BaseController
         new \Session();
         $isLoggedIn = $f3->get('SESSION.is_logged_in');
         if ($isLoggedIn) {
-            echo 'admin dashboard from controller';
+            $f3->set('PAGE_TITLE', 'Dashboard');
+            $f3->set('APP_STYLESHEETS', $this->getStylesheets($f3, ['styles']));
+            $f3->set('APP_JAVASCRIPTS', $this->getJavascripts($f3, ['main']));
+
+            echo \Template::instance()->render(Config::APP_RELATIVE_DIR . 'locoform/Infrastructure/Templates/admin.html');
         } else {
             $f3->reroute('@admin_login', false);
         }
+    }
+
+    public function adminFormDetail(\Base $f3, array $args = []): void
+    {
+        echo "form detail";
+    }
+
+    public function adminFormEntries(\Base $f3, array $args = []): void
+    {
+        echo "form entries";
     }
 
 }

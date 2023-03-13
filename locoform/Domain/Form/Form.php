@@ -1,6 +1,6 @@
 <?php
 
-namespace App\locoform\Domain\Model;
+namespace App\LocoForm\Domain\Form;
 
 use App\locoform\Infrastructure\Config;
 use RedBeanPHP\R as R;

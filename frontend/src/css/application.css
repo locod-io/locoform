@@ -1,0 +1,26 @@
+body, html {
+    background-color: whitesmoke;
+}
+
+#login.container {
+    padding: 10px;
+    max-width: 600px;
+}
+
+#locoFormWrapper.container {
+    padding: 10px;
+    max-width: 950px;
+}
+
+#btnSubmit {
+    display: block;
+    width: 100%;
+}
+
+.validIcon, .errorIcon, .errorText {
+    display: none;
+}
+
+.w-full, .w-full select {
+    width: 100%;
+}
