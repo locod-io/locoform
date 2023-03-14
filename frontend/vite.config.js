@@ -19,7 +19,8 @@ export default defineConfig({
             input: {
                 main: 'src/main.js',
                 login: 'src/login.js',
-                validation: 'src/validation.js',
+                admin: 'src/admin.js',
+                form: 'src/form.js',
                 styles: 'src/css/styles.css'
             }
         }
